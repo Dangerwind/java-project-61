@@ -5,6 +5,7 @@ import static hexlet.code.Engine.ROUNDS;
 
 public class Calc {
     public static void run() {
+        String[] signConferter = {" + ", " - ", " * "};
         String[][] gameData = new String[3][2];
 // стандартное приветствие любой игры
         var userName = Welcome.getName();
@@ -13,22 +14,22 @@ public class Calc {
             var firstNum = new Random().nextInt(0, 100);
             var secondNum = new Random().nextInt(0, 100);
             var sign = new Random().nextInt(3);
+            int resultAnswer = 0;
+            gameData[i][0] = Integer.toString(firstNum).concat(signConferter[sign]).concat(Integer.toString(secondNum));
 
             switch (sign) {
                 case 0 :
-                    gameData[i][0] = Integer.toString(firstNum).concat(" + ").concat(Integer.toString(secondNum));
-                    gameData[i][1] = Integer.toString(firstNum + secondNum);
+                    resultAnswer = firstNum + secondNum;
                     break;
                 case 1 :
-                    gameData[i][0] = Integer.toString(firstNum).concat(" - ").concat(Integer.toString(secondNum));
-                    gameData[i][1] = Integer.toString(firstNum - secondNum);
+                    resultAnswer = firstNum - secondNum;
                     break;
                 case 2 :
-                    gameData[i][0] = Integer.toString(firstNum).concat(" * ").concat(Integer.toString(secondNum));
-                    gameData[i][1] = Integer.toString(firstNum * secondNum);
+                    resultAnswer = firstNum * secondNum;
                     break;
                 default: break;
             }
+            gameData[i][1] = Integer.toString(resultAnswer);
         }
         if (Engine.run(gameData)) {
             System.out.println("Congratulations, " + userName + "!");
