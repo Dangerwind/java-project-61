@@ -4,16 +4,24 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
 
-        Scanner scanner = new Scanner(System.in);
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
+        System.out.println("Please enter the game number and press Enter.");
+        System.out.println("1 - Greet");
+        System.out.println("2 - Even");
+        System.out.println("0 - Exit");
+        System.out.print("Your choice: ");
 
-        scanner.close();
+        Scanner sc = new Scanner(System.in);
+        int gameNumber = sc.nextInt();
+        System.out.println(" ");
 
-
+        switch (gameNumber) {
+            case 1 : Cli.greet();
+                break;
+            case 2 : Even.run();
+               break;
+            default: break;
+        }
 
     }
 }
