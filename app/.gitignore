@@ -1,13 +1,11 @@
-.ideao
+.idea
 .gradle
-build/
 build
 
 **/logs/
 
 bin
 .project*
-.idea/
 
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
