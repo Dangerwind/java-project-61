@@ -1,4 +1,10 @@
+# Сборник игр "Игры разума"
+"Игры разума" состоят из 6 игр.
+* первая
+* вторая
+* третья
 
+## Вторая игра, "четное - нечетное"
 [![asciicast](https://asciinema.org/a/ZoVq2DBniwWArrKgH68qoAPsP.svg)](https://asciinema.org/a/ZoVq2DBniwWArrKgH68qoAPsP)
 
 ### Hexlet tests and linter status:
