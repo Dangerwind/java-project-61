@@ -1,6 +1,7 @@
 plugins {
-    application
-    distribution
+    id("application")
+    id("distribution")
+    id("checkstyle")
     id("java")
 }
 application { mainClass.set("hexlet.code.App") }
@@ -18,6 +19,11 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
+
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.getByName("run", JavaExec::class) {
+    standardInput = System.`in`
 }
