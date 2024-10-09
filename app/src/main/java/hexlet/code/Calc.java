@@ -10,6 +10,9 @@ public class Calc {
 // стандартное приветствие любой игры
         var userName = Welcome.getName();
         System.out.println("What is the result of the expression?");
+
+        /*
+
         for (int i = 0; i < ROUNDS; i++) {
             var firstNum = new Random().nextInt(0, 100);
             var secondNum = new Random().nextInt(0, 100);
@@ -31,6 +34,8 @@ public class Calc {
             }
             gameData[i][1] = Integer.toString(resultAnswer);
         }
+
+        */
         if (Engine.run(gameData)) {
             System.out.println("Congratulations, " + userName + "!");
         } else {
