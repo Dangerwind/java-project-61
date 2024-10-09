@@ -5,7 +5,7 @@ public class Engine {
     // количество раундов любой игры, по умолчанию 3
     public static final int ROUNDS = 3;
 
-    public static boolean run(String[][] gameData) {
+    public static void run(String[][] gameData,String userName) {
         for (int i = 0; i < ROUNDS; i++) {
             System.out.println("Question:" + gameData[i][0]);
             System.out.print("Your answer: ");
@@ -17,9 +17,10 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + gameData[i][1] + "'");
-                return false;
+                System.out.println("Let's try again, " + userName + "!");
+                return;
             }
         }
-        return true;
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

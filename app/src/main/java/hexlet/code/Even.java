@@ -14,10 +14,6 @@ public class Even {
             gameData[i][0] = Integer.toString(randomNum);
             gameData[i][1] = randomNum % 2 == 0 ? "yes" : "no";
         }
-        if (Engine.run(gameData)) {
-            System.out.println("Congratulations, " + userName + "!");
-        } else {
-            System.out.println("Let's try again, " + userName + "!");
-        }
+        Engine.run(gameData,userName);
     }
 }
