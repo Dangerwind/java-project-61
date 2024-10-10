@@ -1,4 +1,7 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Engine;
+import hexlet.code.Welcome;
 
 import java.util.Random;
 import static hexlet.code.Engine.ROUNDS;
@@ -34,6 +37,6 @@ public class Calc {
             gameData[i][1] = Integer.toString(resultAnswer);
         }
 
-        Engine.run(gameData,userName);
+        Engine.run(gameData, userName);
     }
 }
